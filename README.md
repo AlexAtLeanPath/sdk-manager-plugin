@@ -56,6 +56,12 @@ sdkManager {
 }
 ```
 
+*Note: If you use the standard Android Studio gradle project arrangement,
+with an "app" project under the "main" project,
+the buildscript->dependencies->classpath addition should go in the "main" `build.gradle`,
+and the apply plugin addition should go into the "app" `build.gradle`;
+otherwise you might get mysterious errors like `Cannot invoke method startsWith() on null object`.*
+
 On an initial run, the output will look something like this:
 ```
 $ ./gradlew clean assemble
